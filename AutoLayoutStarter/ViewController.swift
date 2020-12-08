@@ -156,10 +156,10 @@ class ViewController: UIViewController {
     
     // purple rectangle layout
     let purpleViewConstraints = [
-        purpleView.topAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -70),
+        purpleView.topAnchor.constraint(equalTo: mainView.bottomAnchor, constant: -90),
         purpleView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -20),
         purpleView.widthAnchor.constraint(equalTo: mainView.widthAnchor, multiplier: 0.6),
-        purpleView.heightAnchor.constraint(equalToConstant: 50)
+        purpleView.heightAnchor.constraint(equalToConstant: 70)
     ]
     NSLayoutConstraint.activate(purpleViewConstraints)
     
@@ -167,26 +167,26 @@ class ViewController: UIViewController {
     let redViewConstraints = [
         redView.topAnchor.constraint(equalTo: mainView.topAnchor, constant: 20),
         redView.trailingAnchor.constraint(equalTo: mainView.trailingAnchor, constant: -20),
-        redView.widthAnchor.constraint(equalToConstant: 200),
-        redView.heightAnchor.constraint(equalToConstant: 50)
+        redView.widthAnchor.constraint(equalToConstant: 250),
+        redView.heightAnchor.constraint(equalToConstant: 70)
     ]
     NSLayoutConstraint.activate(redViewConstraints)
     
     // orange rectangle 1 layout
     let orangeView1Constraints = [
-        orangeView1.topAnchor.constraint(equalTo: redView.topAnchor, constant: 7),
-        orangeView1.leadingAnchor.constraint(equalTo: redView.leadingAnchor, constant: 7),
-        orangeView1.widthAnchor.constraint(equalToConstant: 100),
-        orangeView1.heightAnchor.constraint(equalToConstant: 36)
+        orangeView1.topAnchor.constraint(equalTo: redView.topAnchor, constant: 10),
+        orangeView1.leadingAnchor.constraint(equalTo: redView.leadingAnchor, constant: 10),
+        orangeView1.widthAnchor.constraint(equalToConstant: 130),
+        orangeView1.heightAnchor.constraint(equalToConstant: 50)
     ]
     NSLayoutConstraint.activate(orangeView1Constraints)
     
     // orange rectangle 2 layout
     let orangeView2Constraints = [
-        orangeView2.topAnchor.constraint(equalTo: redView.topAnchor, constant: 7),
-        orangeView2.trailingAnchor.constraint(equalTo: redView.trailingAnchor, constant: -7),
-        orangeView2.widthAnchor.constraint(equalToConstant: 79),
-        orangeView2.heightAnchor.constraint(equalToConstant: 36)
+        orangeView2.topAnchor.constraint(equalTo: redView.topAnchor, constant: 10),
+        orangeView2.trailingAnchor.constraint(equalTo: redView.trailingAnchor, constant: -10),
+        orangeView2.widthAnchor.constraint(equalToConstant: 90),
+        orangeView2.heightAnchor.constraint(equalToConstant: 50)
     ]
     NSLayoutConstraint.activate(orangeView2Constraints)
     
@@ -200,24 +200,24 @@ class ViewController: UIViewController {
 //    NSLayoutConstraint.activate(blueRectCintainerConstraints)
 //
     let blueView1Constraints = [
-        blueView1.widthAnchor.constraint(equalToConstant: 50),
-        blueView1.heightAnchor.constraint(equalToConstant: 50)
+        blueView1.widthAnchor.constraint(equalToConstant: 70),
+        blueView1.heightAnchor.constraint(equalToConstant: 70)
 //        blueView1.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
 //        blueView1.topAnchor.constraint(equalTo: blueRectCintainer.topAnchor)
     ]
     NSLayoutConstraint.activate(blueView1Constraints)
     
     let blueView2Constraints = [
-        blueView2.widthAnchor.constraint(equalToConstant: 50),
-        blueView2.heightAnchor.constraint(equalToConstant: 50)
+        blueView2.widthAnchor.constraint(equalToConstant: 70),
+        blueView2.heightAnchor.constraint(equalToConstant: 70)
 //        blueView2.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
 //        blueView2.centerYAnchor.constraint(equalTo: blueRectCintainer.centerYAnchor)
     ]
     NSLayoutConstraint.activate(blueView2Constraints)
     
     let blueView3Constraints = [
-        blueView3.widthAnchor.constraint(equalToConstant: 50),
-        blueView3.heightAnchor.constraint(equalToConstant: 50)
+        blueView3.widthAnchor.constraint(equalToConstant: 70),
+        blueView3.heightAnchor.constraint(equalToConstant: 70)
 //        blueView3.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
 //        blueView3.bottomAnchor.constraint(equalTo: blueRectCintainer.bottomAnchor)
     ]
