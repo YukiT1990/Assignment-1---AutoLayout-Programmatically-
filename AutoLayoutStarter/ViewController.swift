@@ -77,11 +77,11 @@ class ViewController: UIViewController {
         return blueRect
     }()
     
-    let blueRectCintainer: UIView = {
-        let rect = UIView(frame: CGRect.zero)
-        rect.translatesAutoresizingMaskIntoConstraints = false
-        return rect
-    }()
+//    let blueRectCintainer: UIView = {
+//        let rect = UIView(frame: CGRect.zero)
+//        rect.translatesAutoresizingMaskIntoConstraints = false
+//        return rect
+//    }()
     
     
   let squareButton: UIButton = {
@@ -123,10 +123,10 @@ class ViewController: UIViewController {
     mainView.addSubview(redView)
     redView.addSubview(orangeView1)
     redView.addSubview(orangeView2)
-    mainView.addSubview(blueRectCintainer)
-    blueRectCintainer.addSubview(blueView1)
-    blueRectCintainer.addSubview(blueView2)
-    blueRectCintainer.addSubview(blueView3)
+//    mainView.addSubview(blueRectCintainer)
+//    blueRectCintainer.addSubview(blueView1)
+//    blueRectCintainer.addSubview(blueView2)
+//    blueRectCintainer.addSubview(blueView3)
     setupLayout()
   }
 
@@ -191,53 +191,55 @@ class ViewController: UIViewController {
     NSLayoutConstraint.activate(orangeView2Constraints)
     
     // blue rectangles layout
-    let blueRectCintainerConstraints = [
-        blueRectCintainer.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-        blueRectCintainer.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
-        blueRectCintainer.widthAnchor.constraint(equalToConstant: 50),
-        blueRectCintainer.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.7)
-    ]
-    NSLayoutConstraint.activate(blueRectCintainerConstraints)
-    
+//    let blueRectCintainerConstraints = [
+//        blueRectCintainer.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+//        blueRectCintainer.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
+//        blueRectCintainer.widthAnchor.constraint(equalToConstant: 50),
+//        blueRectCintainer.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.7)
+//    ]
+//    NSLayoutConstraint.activate(blueRectCintainerConstraints)
+//
     let blueView1Constraints = [
         blueView1.widthAnchor.constraint(equalToConstant: 50),
-        blueView1.heightAnchor.constraint(equalToConstant: 50),
-        blueView1.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
-        blueView1.topAnchor.constraint(equalTo: blueRectCintainer.topAnchor)
+        blueView1.heightAnchor.constraint(equalToConstant: 50)
+//        blueView1.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
+//        blueView1.topAnchor.constraint(equalTo: blueRectCintainer.topAnchor)
     ]
     NSLayoutConstraint.activate(blueView1Constraints)
     
     let blueView2Constraints = [
         blueView2.widthAnchor.constraint(equalToConstant: 50),
-        blueView2.heightAnchor.constraint(equalToConstant: 50),
-        blueView2.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
-        blueView2.centerYAnchor.constraint(equalTo: blueRectCintainer.centerYAnchor)
+        blueView2.heightAnchor.constraint(equalToConstant: 50)
+//        blueView2.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
+//        blueView2.centerYAnchor.constraint(equalTo: blueRectCintainer.centerYAnchor)
     ]
     NSLayoutConstraint.activate(blueView2Constraints)
     
     let blueView3Constraints = [
         blueView3.widthAnchor.constraint(equalToConstant: 50),
-        blueView3.heightAnchor.constraint(equalToConstant: 50),
-        blueView3.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
-        blueView3.bottomAnchor.constraint(equalTo: blueRectCintainer.bottomAnchor)
+        blueView3.heightAnchor.constraint(equalToConstant: 50)
+//        blueView3.centerXAnchor.constraint(equalTo: blueRectCintainer.centerXAnchor),
+//        blueView3.bottomAnchor.constraint(equalTo: blueRectCintainer.bottomAnchor)
     ]
     NSLayoutConstraint.activate(blueView3Constraints)
     
     // below UIStackView didn't work
-//    let blueRectsStackView = UIStackView(arrangedSubviews: [
-//                                            blueView1, blueView2, blueView3])
-//    blueRectsStackView.translatesAutoresizingMaskIntoConstraints = false
-//    blueRectsStackView.axis = .vertical
-//    blueRectsStackView.alignment = .center
-//    blueRectsStackView.distribution = .fillEqually
-//
-//    mainView.addSubview(blueRectsStackView)
-//    NSLayoutConstraint.activate([
-//        blueRectsStackView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
-//        blueRectsStackView.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
-//        blueRectsStackView.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.7),
-//        blueRectsStackView.widthAnchor.constraint(equalToConstant: 50)
-//    ])
+    let blueRectsStackView = UIStackView(arrangedSubviews: [
+                                            blueView1, blueView2, blueView3])
+    blueRectsStackView.translatesAutoresizingMaskIntoConstraints = false
+    blueRectsStackView.axis = .vertical
+    blueRectsStackView.alignment = .center
+    blueRectsStackView.distribution = .equalSpacing
+//    blueRectsStackView.spacing = 20
+
+    mainView.addSubview(blueRectsStackView)
+    NSLayoutConstraint.activate([
+        blueRectsStackView.centerXAnchor.constraint(equalTo: mainView.centerXAnchor),
+        blueRectsStackView.centerYAnchor.constraint(equalTo: mainView.centerYAnchor),
+        
+        blueRectsStackView.heightAnchor.constraint(equalTo: mainView.heightAnchor, multiplier: 0.7),
+        blueRectsStackView.widthAnchor.constraint(equalToConstant: 100)
+    ])
     
   }
 
